@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer.Repositories
 {
+    //kitaplar için database repositorys oluşturdum
     public class BookRepository
     {
         LibraryContext db;
@@ -52,6 +53,7 @@ namespace DataAccesLayer.Repositories
         //    db.SaveChanges();
         //}
 
+        //Filtreleme işlemleri
         public List<KitapData> FilterList(string name,string yazarName,string catName,string IsbnNo,string rafName,string kitaplikName)
         {
             List<KitapData> bookData = (from c in db.Kitaplar where c.Ad.Contains(name) &&
